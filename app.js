@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send(req.query.foo);
+  eval(req.query.foo);
+  res.send(eval(req.query.bar));
 });
 
 app.listen(1337);
